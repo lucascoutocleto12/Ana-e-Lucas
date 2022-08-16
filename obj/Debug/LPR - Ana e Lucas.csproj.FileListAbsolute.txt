@@ -1,0 +1,8 @@
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\bin\Debug\LPR - Ana e Lucas.exe.config
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\bin\Debug\LPR - Ana e Lucas.exe
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\bin\Debug\LPR - Ana e Lucas.pdb
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\obj\Debug\LPR - Ana e Lucas.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\obj\Debug\LPR - Ana e Lucas.csproj.SuggestedBindingRedirects.cache
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\obj\Debug\LPR - Ana e Lucas.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\obj\Debug\LPR - Ana e Lucas.exe
+C:\Users\lucas\source\repos\LPR - Ana e Lucas\obj\Debug\LPR - Ana e Lucas.pdb
