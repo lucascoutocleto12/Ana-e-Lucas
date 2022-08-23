@@ -27,7 +27,7 @@ namespace LPR___Ana_e_Lucas
                 Console.WriteLine("3 - EDITAR JOGO");
                 Console.WriteLine("4 - REMOVER JOGO");
                 Console.WriteLine("");
-                Console.WriteLine("OPCAO: ");
+                Console.Write("OPCAO: ");
                 String opcao = Console.ReadLine();
 
                 bool resultado;
@@ -56,6 +56,11 @@ namespace LPR___Ana_e_Lucas
                 {
                     resultado = ListarJogos(ListadeJogo);
                 }
+                else if (opcao == "3")
+                {
+                    resultado = EditarJogo(ListadeJogo);
+
+                }
                 else if (opcao == "4")
                 {
                     resultado = DeletarJogo(ListadeJogo);
@@ -65,17 +70,17 @@ namespace LPR___Ana_e_Lucas
             }
 
         }
-        public static bool AdicionarJogo(List < Jogo > ListadeJogo)
+        public static bool AdicionarJogo(List<Jogo> ListadeJogo)
         {
-            Console.Clear();           
+            Console.Clear();
             Console.Write("Titulo: ");
-            String titulo = Console.ReadLine();           
+            String titulo = Console.ReadLine();
             Console.WriteLine("");
             Console.Write("Gênero: ");
             String genero = Console.ReadLine();
             Console.WriteLine("");
             Console.Write("Data de Lançamento: ");
-            int data = Convert.ToInt32(Console.ReadLine());            
+            int data = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("");
             Console.Write("Número Máximo de Jogadores: ");
             int maxJogadores = Convert.ToInt32(Console.ReadLine());
@@ -90,7 +95,7 @@ namespace LPR___Ana_e_Lucas
             ListadeJogo.Add(novojogo);
             Console.Beep();
 
-            return true;          
+            return true;
         }
 
         public static bool ListarJogos(List<Jogo> ListadeJogo)
@@ -103,12 +108,12 @@ namespace LPR___Ana_e_Lucas
             {
                 Console.Write("Jogo: ");
                 Console.WriteLine(jogo.getTitulo());
-                Console.Write("Ano de lançamento: ");
-                Console.WriteLine(jogo.getData());
                 Console.Write("Gênero: ");
                 Console.WriteLine(jogo.getGenero());
+                Console.Write("Ano de lançamento: ");
+                Console.WriteLine(jogo.getData());
                 Console.Write("Número máximo de jogadores: ");
-                Console.WriteLine(jogo.getMaxJogadores());            
+                Console.WriteLine(jogo.getMaxJogadores());
                 Console.WriteLine("================================================================================================");
                 Console.WriteLine("");
             }
@@ -119,14 +124,43 @@ namespace LPR___Ana_e_Lucas
         }
         public static bool DeletarJogo(List<Jogo> ListadeJogo)
         {
+            Console.Clear();
+            Console.Write("Digite o título do jogo a ser deletado: ");
+            String jogoDeletar = Console.ReadLine();
+
             foreach (Jogo jogo in ListadeJogo)
-            { 
-                if()
+            {
+                if (jogo.getTitulo() == jogoDeletar)
                 {
+                    ListadeJogo.Remove(jogo);
+                    break;                     
+                }
+
+            }            
+            return true;
+        }
+        public static bool EditarJogo(List<Jogo> ListadeJogo)
+        {
+            Console.Clear();
+            Console.Write("Digite o título do jogo a ser editado: ");
+            String jogoEditar = Console.ReadLine();
+
+            foreach (Jogo jogo in ListadeJogo)
+            {
+                if (jogo.getTitulo() == jogoEditar)
+                {
+                    Console.WriteLine("Escolha o novo título do jogo: ");
+                    String jogoEditado = Console.ReadLine();
+                    jogo.setTitulo(jogoEditado);
+                    Console.WriteLine("Escolha o novo gênero do jogo: ");
+                    String GeneroEditado = Console.ReadLine();
+                    jogo.setGenero(GeneroEditado);
 
                 }
+
             }
-                return true;
+            
+            return true;
         }
     }
 }

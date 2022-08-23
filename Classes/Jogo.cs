@@ -16,6 +16,10 @@ namespace LPR___Ana_e_Lucas.Classes
         private int maxJogadores; // Máximo de Jogadores
         private int metacritic; // Pontuação
 
+        static int posicaoJogo;
+
+        int posicaoJogoAtual;
+
         //Construtores
         public Jogo (String titulo, int data, String genero, int maxJogadores, int metacritic )
         {
@@ -24,6 +28,10 @@ namespace LPR___Ana_e_Lucas.Classes
             this.genero = genero;
             this.maxJogadores = maxJogadores;
             this.metacritic = metacritic;
+
+            posicaoJogo++;
+            this.posicaoJogoAtual = posicaoJogo;
+
         }
         public Jogo(String titulo, int data, String genero, int maxJogadores)
         {
@@ -31,6 +39,9 @@ namespace LPR___Ana_e_Lucas.Classes
             this.data = data;
             this.genero = genero;
             this.maxJogadores = maxJogadores;
+
+            posicaoJogo++;
+            this.posicaoJogoAtual = posicaoJogo;
         }
 
         // Metodos de Acesso
@@ -49,6 +60,7 @@ namespace LPR___Ana_e_Lucas.Classes
         {
             return this.genero;
         }
+       
         public void setGenero(String genero)
         {
             if (genero != "")
